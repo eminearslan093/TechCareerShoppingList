@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\TechCareerShoppingList.Front.props" />
+</Project>

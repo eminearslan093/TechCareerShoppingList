@@ -1,0 +1,47 @@
+﻿@*
+@{
+    Layout = null;
+}
+
+<div class="container my-4 pt-4">
+    <table class="table table-striped table-bordered ">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Definition</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @if (Model.Count > 0)
+            {
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <th>@item.ID</th>
+                        <td>@item.Definition</td>
+                        <th>
+                            <a asp-controller="Category" asp-route-id="@item.ID" asp-action="Create" class="btn btn-primary mx-3">Ekle</a>
+
+                        </th>
+                        <th>
+                            <a asp-controller="Category" asp-route-id="@item.ID" asp-action="Remove" class="btn btn-danger mx-3">Sil</a>
+                           
+                        </th>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="2">Herhangi bir data bulunamadı.</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+</div>
+*@
